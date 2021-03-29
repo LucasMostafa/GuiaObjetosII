@@ -1,6 +1,6 @@
 package com.company.ejercicio1;
 
-public class Author extends Book {
+public  class Author {
     String name;
     String surname;
     String email;
@@ -9,15 +9,7 @@ public class Author extends Book {
     public Author(){
     }
 
-    public Author(String name, String surname, String email, char gender){
-        this.name= name;
-        this.surname= surname;
-        this.email= email;
-        this.gender= gender;
-    }
-
-    public Author(String title, double price, int stock, String author, String name, String surname, String email, char gender) {
-        super(title, price, stock, author);
+    public Author(String name, String surname, String email, char gender) {
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -55,4 +47,6 @@ public class Author extends Book {
     public void setGender(char gender) {
         this.gender = gender;
     }
+
+
 }
