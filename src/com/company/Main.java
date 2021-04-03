@@ -2,9 +2,13 @@ package com.company;
 
 import com.company.ejercicio1.Author;
 import com.company.ejercicio1.Book;
+import com.company.ejercicio2.Client;
+import com.company.ejercicio2.Invoice;
+import com.company.ejercicio2.SaleItem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 public class Main {
 
@@ -12,7 +16,7 @@ public class Main {
 
         List<Author> authors= new ArrayList<Author>();
 
-        //Ejercicio 1
+        //EJERCICIO 1
         ///Inciso A
         Author author1= new Author("Joshua", "Bloch", "joshua@email.com", 'M');
         Author author2= new Author("Lucas", "Mostafa", "cuca@email.com", 'M');
@@ -45,5 +49,23 @@ public class Main {
         ///Inciso G
         ///Inciso H
         System.out.println(book.toPrintBookWhitPrice(authors));
+
+        //EJERCICIO 2
+        Client client= new Client("Lucas", "mostafalucas@gmail.com", 20);
+        System.out.println(client.toPrintClient());
+
+        SaleItem item1= new SaleItem("Alfajor", "Oreo", 50, 10 );
+        SaleItem item2= new SaleItem("Papas fritas", "Pringles", 250, 2 );
+        SaleItem item3= new SaleItem("Galletitas", "Frutigram", 80, 4 );
+
+        SaleItem[] items= new SaleItem[3];
+        items[0]= item1;
+        items[1]= item2;
+        items[2]= item3;
+
+        Invoice invoice= new Invoice(items, client);
+        System.out.println(invoice.toPrintInvoice());
+
+
     }
 }

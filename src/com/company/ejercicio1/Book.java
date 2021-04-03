@@ -19,22 +19,27 @@ public class Book {
     }
 
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
     public double getPrice() {
+
         return price;
     }
 
     public void setPrice(double price) {
+
         this.price = price;
     }
 
     public int getStock() {
+
         return stock;
     }
 
@@ -46,6 +51,7 @@ public class Book {
     }
 
     public void setAuthor(List<Author> authors) {
+
         this.authors = authors;
     }
 
@@ -54,6 +60,7 @@ public class Book {
     }
 
     public int increaseStock(int increase){
+
         return this.stock= this.stock + increase;
     }
     public String toPrintBook (){
@@ -67,7 +74,6 @@ public class Book {
             for (Author x:authors) {
                 local= local + "\n" + x.name + " " + x.surname + ".";
             }
-
         }
         else{
             local= "Autor desconocido";
