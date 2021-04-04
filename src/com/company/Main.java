@@ -5,6 +5,8 @@ import com.company.ejercicio1.Book;
 import com.company.ejercicio2.Client;
 import com.company.ejercicio2.Invoice;
 import com.company.ejercicio2.SaleItem;
+import com.company.ejercicio3.Account;
+import com.company.ejercicio3.ClientBank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +68,23 @@ public class Main {
         Invoice invoice= new Invoice(items, client);
         System.out.println(invoice.toPrintInvoice());
 
+        //EJERCICIO 3
+        ClientBank clientBank= new ClientBank("Lucas", 'M');
+        System.out.println(clientBank.toPrintClientBank());
 
+        Account account= new Account(10000, clientBank);
+        System.out.println(account.toPrintAccount());
+        account.insert(5000);
+        System.out.println(account.toPrintAccount());
+        account.extract(17000);
+        System.out.println(account.toPrintAccount());
+        account.extract(7000);
+        System.out.println(account.toPrintAccount());
+
+        for (String operations: account.getOperations()) {
+            if(operations!=null){
+                System.out.println(operations);
+            }
+        }
     }
 }
